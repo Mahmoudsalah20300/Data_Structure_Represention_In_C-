@@ -135,6 +135,24 @@ void Linked_List<T>::Delete_at_node(int position)
 }
 
 
+template<typename T>
+bool Linked_List<T>::Search_for_the_element(T value)
+{
+	bool value_founded = false;
+	Node<T>* current = head;
+
+	while (!current->next)
+	{
+		if (current->data == value)
+		{
+			value_founded = true;
+			break;
+		}
+	}
+
+	return value_founded;
+}
+
 
 template<typename T>
 void Linked_List<T>::Display_Elements()

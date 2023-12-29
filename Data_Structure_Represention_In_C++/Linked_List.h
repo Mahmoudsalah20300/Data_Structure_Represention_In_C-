@@ -25,7 +25,7 @@ class Linked_List {
 		void Delete_at_begining();
 		void Delete_in_End();
 		void Delete_at_node(int);
-		void Search_for_the_element(T);
+		bool Search_for_the_element(T);
 		void Display_Elements();
 		void clear();
 		~Linked_List();
@@ -34,7 +34,11 @@ class Linked_List {
 
 
 
-
+template<typename T>
+class Double_Node
+{
+	
+};
 
 
 
