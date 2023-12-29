@@ -1,8 +1,5 @@
 
-
 #include "Linked_List.h"
-
-
 
 
 
@@ -87,7 +84,7 @@ void Linked_List<T> ::Delete_in_End()
 
 	if(!head->next)
 	{
-		delet head;
+		delete head;
 		head = nullptr;
 	}
 	else {
@@ -102,31 +99,71 @@ void Linked_List<T> ::Delete_in_End()
 	}
 }
 
-/*
+
 template<typename T>
 void Linked_List<T>::Delete_at_node(int position)
 {
-	int counter = 0;
+	int counter = 1;
 	
 	if(!head)
 		return;
 	
 
 	Node<T>* current = head;
-	
+	Node<T>* temp = head;
+
 	while (!current->next->next)
 		counter++;
 
 	if (counter < position)
 		return;
 
-	counter = 0;
+	counter = 1;
 
-	while (counter != position)
+	while (counter != position-1)
 	{
 		counter++;
-		current->next = current->next->next;
+		current->next = current->next->next; 
 	}
-		
+
+	temp = current;
+	temp = current->next->next->next;
+
+	current->next = current->next->next;
+	delete current;
+	delete temp;
 }
-*/
+
+
+
+template<typename T>
+void Linked_List<T>::Display_Elements()
+{
+	Node<T>* current = head;
+		
+	while (!current->next)
+		std::cout << current->data << "\t";
+
+}
+
+template<typename T>
+void Linked_List<T>::clear()
+{
+	Node<T> current = head;
+	while (!head)
+	{
+		head = head->next;
+		delete current;
+		current = head;
+	}
+	delete current;
+}
+template <typename T>
+Linked_List<T>::~Linked_List()
+{
+	delete head;
+}
+
+
+
+

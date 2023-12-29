@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+
 template<typename T>
 class Node {
 	
@@ -24,7 +26,7 @@ class Linked_List {
 		void Delete_in_End();
 		void Delete_at_node(int);
 		void Search_for_the_element(T);
-		void Display_Elements(T);
+		void Display_Elements();
 		void clear();
 		~Linked_List();
 
