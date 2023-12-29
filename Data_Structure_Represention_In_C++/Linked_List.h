@@ -38,7 +38,7 @@ template<typename T>
 class Double_Node:public Node<T>
 {
 	
-	public:
+	public: 
 	Double_Node* prev;
 	Double_Node(T);
 };
