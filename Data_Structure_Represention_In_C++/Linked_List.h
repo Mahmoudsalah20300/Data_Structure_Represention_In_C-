@@ -34,31 +34,6 @@ class Linked_List {
 
 
 
-template<typename T>
-class Double_Node :public Node<T>
-{
-
-public:
-	Double_Node* prev;
-	Double_Node(T);
-};
-
-
-
-
-template<typename T>
-class Double_Linked_List {
-
-private:
-	Double_Node<T>* Tail;
-public:
-	Double_Linked_List();
-	~Double_Linked_List();
-};
-
-
-
-
 
 template<typename T>
 Node<T>::Node(T value) : data(value), next(nullptr)
@@ -81,6 +56,7 @@ void Linked_List<T> ::Insert_at_begining(T value)
 	Node<T>* New_Node = new Node<T>(value);
 	New_Node->next = head;
 	head = New_Node;
+	
 }
 
 
@@ -216,9 +192,10 @@ void Linked_List<T>::Display_Elements()
 {
 	Node<T>* current = head;
 
-	while (!current->next)
+	while (current) {
 		std::cout << current->data << "\t";
-
+		current = current->next;
+	}
 }
 
 template<typename T>
@@ -239,3 +216,30 @@ Linked_List<T>::~Linked_List()
 {
 	delete head;
 }
+
+
+
+
+
+
+template<typename T>
+class Double_Node :public Node<T>
+{
+
+public:
+	Double_Node* prev;
+	Double_Node(T);
+};
+
+
+
+
+template<typename T>
+class Double_Linked_List {
+
+private:
+	Double_Node<T>* Tail;
+public:
+	Double_Linked_List();
+	~Double_Linked_List();
+};
