@@ -110,6 +110,6 @@ void Singular_Linked_List_testing() {
 	Mahmoud.Display_Elements();
 	
 	std::cout << "\nDelete at Certain Node\n---------------------------------------\n";
-
-
+	
+		 
 }
