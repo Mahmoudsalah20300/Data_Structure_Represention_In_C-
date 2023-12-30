@@ -1,7 +1,22 @@
 #pragma once
 
-#include <iostream>
+/*
+   Conclusions: 
+   1- In this template Class Both Declaration and Definition Must be in the Same file.
+   2- Seperating defination (in .cpp file) away form Declaration will Cause a linking Error
+	  This Because that it is user defined class so at the compilation the defintion size is
+	  Located and theofor Both Definetion and Declatration must be in the same File.
+*/
 
+
+
+#include <iostream>
+		/*************************************** Declaration of templates ****************************************/
+
+
+
+
+/*This is the template for Node*/
 template<typename T>
 class Node {
 	
@@ -11,7 +26,7 @@ class Node {
 		Node(T);
 };
 
-
+/*This is the template for Linked List with the avaliable function of Linke List*/
 template<typename T>
 class Linked_List {
 
@@ -32,16 +47,16 @@ class Linked_List {
 
 };
 
+		/****************************************   Deginetion of the Class   *******************************************/
 
-
-
+/*Constructor of the Node template Class*/
 template<typename T>
 Node<T>::Node(T value) : data(value), next(nullptr)
 {
 
 }
 
-
+/*This is the Constructor of Linked List Initialization*/
 
 template <typename T>
 Linked_List<T> ::Linked_List() :head(nullptr)
@@ -49,6 +64,10 @@ Linked_List<T> ::Linked_List() :head(nullptr)
 
 }
 
+
+/*************************************************************************************
+	This Class is used to add an element at the Beginning of the list
+**************************************************************************************/
 
 template <typename T>
 void Linked_List<T> ::Insert_at_begining(T value)
@@ -59,6 +78,9 @@ void Linked_List<T> ::Insert_at_begining(T value)
 	
 }
 
+/*************************************************************************************
+	This Class is used to add an element at the End of the list
+**************************************************************************************/
 
 template <typename T>
 void Linked_List<T> ::Insert_in_End(T value)
@@ -78,6 +100,9 @@ void Linked_List<T> ::Insert_in_End(T value)
 	}
 }
 
+/*************************************************************************************
+	This Class is used to add an element at the Certain node in the list
+**************************************************************************************/
 
 template <typename T>
 void Linked_List<T> ::Insert_at_node(T value, T atnode)
@@ -95,7 +120,9 @@ void Linked_List<T> ::Insert_at_node(T value, T atnode)
 	}
 }
 
-
+/*************************************************************************************
+	This Class is used to delete an element at the beginning of the list
+**************************************************************************************/
 template <typename T>
 void Linked_List<T> ::Delete_at_begining()
 {
@@ -106,6 +133,13 @@ void Linked_List<T> ::Delete_at_begining()
 		delete temp;
 	}
 }
+
+
+
+/*************************************************************************************
+	This Class is used to delete an element at the End of the list
+**************************************************************************************/
+
 
 template <typename T>
 void Linked_List<T> ::Delete_in_End()
@@ -132,6 +166,9 @@ void Linked_List<T> ::Delete_in_End()
 	}
 }
 
+/*************************************************************************************
+	This Class is used to delete an element at certain node of the list
+**************************************************************************************/
 
 template<typename T>
 void Linked_List<T>::Delete_at_node(int position)
@@ -167,6 +204,10 @@ void Linked_List<T>::Delete_at_node(int position)
 	delete temp;
 }
 
+/*************************************************************************************
+	This Class is used to Search an element In the list
+**************************************************************************************/
+
 
 template<typename T>
 bool Linked_List<T>::Search_for_the_element(T value)
@@ -186,6 +227,9 @@ bool Linked_List<T>::Search_for_the_element(T value)
 	return value_founded;
 }
 
+/*************************************************************************************
+	This Class is used to Display  elements  of the list
+**************************************************************************************/
 
 template<typename T>
 void Linked_List<T>::Display_Elements()
@@ -198,11 +242,15 @@ void Linked_List<T>::Display_Elements()
 	}
 }
 
+/*************************************************************************************
+	This Class is used to delete an element at the End of the list
+**************************************************************************************/
+
 template<typename T>
 void Linked_List<T>::clear()
 {
-	Node<T> current = head;
-	while (!head)
+	Node<T>* current = head;
+	while (head)
 	{
 		head = head->next;
 		delete current;
@@ -211,16 +259,17 @@ void Linked_List<T>::clear()
 	delete current;
 }
 
+/*************************************************************************************
+	This Class is used to Destruct the list
+**************************************************************************************/
+
 template <typename T>
 Linked_List<T>::~Linked_List()
 {
 	delete head;
 }
 
-
-
-
-
+      /**************************************** Double Linked List Declaration *********************************************/
 
 template<typename T>
 class Double_Node :public Node<T>

@@ -26,17 +26,61 @@ int main()
 	std::cout << "Start Delete at the Begining function." << "\n--------------------------------------------\n";
 	Mahmoud.Delete_at_begining();
 	Mahmoud.Display_Elements();
-	std::cout << "\n133 id deleated\n";
+	std::cout << "\n";
 	Mahmoud.Delete_at_begining();
 	Mahmoud.Display_Elements();
-	std::cout << "\n10 id deleated\n";
+	std::cout << "\n";
 	Mahmoud.Delete_at_begining();
 	Mahmoud.Display_Elements();
-	std::cout << "\n17 id deleated\n";
+	std::cout << "\n";
 	Mahmoud.Delete_at_begining();
 	Mahmoud.Display_Elements();
-	std::cout << "\n15 id deleated\n";
+	std::cout << "\n";
 
+	std::cout << "Start Delete at End  function." << "\n--------------------------------------------\n";
+	Mahmoud.Insert_in_End(15);
+	Mahmoud.Display_Elements();
+	std::cout << "\n";
+	Mahmoud.Insert_in_End(17);
+	Mahmoud.Display_Elements();
+	std::cout << "\n";
+	Mahmoud.Insert_in_End(10);
+	Mahmoud.Display_Elements();
+	std::cout << "\n";
+	Mahmoud.Insert_in_End(133);
+	Mahmoud.Display_Elements();
+	std::cout << "\n";
 
+	std::cout << "Start Delete at the Begining function." << "\n--------------------------------------------\n";
+	Mahmoud.Delete_in_End();
+	Mahmoud.Display_Elements();
+	std::cout << "\n";
+	Mahmoud.Delete_in_End();
+	Mahmoud.Display_Elements();
+	std::cout << "\n";
+	Mahmoud.Delete_in_End();
+	Mahmoud.Display_Elements();
+	std::cout << "\n";
+	Mahmoud.Delete_in_End();
+	Mahmoud.Display_Elements();
+	std::cout << "\n";
+
+	std::cout << "Creat a new List\n--------------------------------------------------------------------------\n";
+	Mahmoud.Insert_in_End(15);
+	Mahmoud.Display_Elements();
+	std::cout << "\n";
+	Mahmoud.Insert_in_End(17);
+	Mahmoud.Display_Elements();
+	std::cout << "\n";
+	Mahmoud.Insert_in_End(10);
+	Mahmoud.Display_Elements();
+	std::cout << "\n";
+	Mahmoud.Insert_in_End(133);
+	Mahmoud.Display_Elements();
+	std::cout << "\n";
+
+	std::cout << "|-> Clear the whole List\n";
+	Mahmoud.clear();
+	std::cout << "|-> The Whole list is cleared\n";
 
 }
