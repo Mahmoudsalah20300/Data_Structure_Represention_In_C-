@@ -12,9 +12,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Linked_List_testing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Linked_List.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Linked_List_testing.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

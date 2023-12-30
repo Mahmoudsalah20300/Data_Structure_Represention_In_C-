@@ -180,10 +180,12 @@ void Linked_List<T>::Delete_at_node(int position)
 
 
 	Node<T>* current = head;
-	Node<T>* temp = head;
+	Node<T>* temp    = head;
 
-	while (!current->next->next)
+	while (current) {
 		counter++;
+		current = current -> next;
+	}
 
 	if (counter < position)
 		return;
@@ -193,7 +195,7 @@ void Linked_List<T>::Delete_at_node(int position)
 	while (counter != position - 1)
 	{
 		counter++;
-		current->next = current->next->next;
+		current = current->next;
 	}
 
 	temp = current;
@@ -215,16 +217,15 @@ bool Linked_List<T>::Search_for_the_element(T value)
 	bool value_founded = false;
 	Node<T>* current = head;
 
-	while (!current->next)
+	while (current)
 	{
 		if (current->data == value)
 		{
-			value_founded = true;
-			break;
+			return true;
 		}
+		current = current -> next;
 	}
-
-	return value_founded;
+	return false;
 }
 
 /*************************************************************************************

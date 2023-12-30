@@ -128,9 +128,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Linked_List_testing.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Linked_List.h" />
+    <ClInclude Include="Linked_List_testing.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
