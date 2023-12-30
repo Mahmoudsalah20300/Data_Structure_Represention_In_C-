@@ -103,7 +103,13 @@ void Singular_Linked_List_testing() {
 
 
 	std::cout << "\nAdd At Certain Node\n------------------------------------------\n";
+	Mahmoud.Insert_at_node(-5,3);
+	Mahmoud.Display_Elements();
+	std::cout << "\n";
+	Mahmoud.Insert_at_node(-9, 1);
+	Mahmoud.Display_Elements();
 	
-
 	std::cout << "\nDelete at Certain Node\n---------------------------------------\n";
+
+
 }

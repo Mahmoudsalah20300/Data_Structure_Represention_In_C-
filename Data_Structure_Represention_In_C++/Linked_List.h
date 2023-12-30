@@ -108,15 +108,31 @@ template <typename T>
 void Linked_List<T> ::Insert_at_node(T value, T atnode)
 {
 	Node<T>* New_Node = new Node<T>(value);
-	Node<T>* current = head;
+	New_Node->data = value;
 
-	while (current && current->data != atnode)
-		current = current->next;
-
-	if (current)
+	T position = 1;
+	if (position == atnode)
 	{
-		New_Node->next = current->next;
-		current->next = New_Node;
+		New_Node->next = head;
+		head = New_Node;
+	}
+	else {
+		
+		
+		Node<T>* current = head;
+		while (position != atnode - 1) {
+			position++;
+			current = current->next;
+		}
+
+		if (current)
+		{
+			New_Node->next = current->next;
+			current->next = New_Node;
+		}
+		else {
+			std::cout << "\nCheck your List Nodes!" << std::endl;
+		}
 	}
 }
 
