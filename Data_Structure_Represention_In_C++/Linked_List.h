@@ -274,10 +274,9 @@ Linked_List<T>::~Linked_List()
 template<typename T>
 class Double_Node :public Node<T>
 {
-
-public:
-	Double_Node* prev;
-	Double_Node(T);
+	public:
+		Double_Node* prev;
+		Double_Node(T);
 };
 
 
@@ -292,3 +291,5 @@ public:
 	Double_Linked_List();
 	~Double_Linked_List();
 };
+
+

@@ -37,7 +37,7 @@ int main()
 	Mahmoud.Display_Elements();
 	std::cout << "\n";
 
-	std::cout << "Start Delete at End  function." << "\n--------------------------------------------\n";
+	std::cout << "Start Insert at End  function." << "\n--------------------------------------------\n";
 	Mahmoud.Insert_in_End(15);
 	Mahmoud.Display_Elements();
 	std::cout << "\n";
@@ -51,7 +51,7 @@ int main()
 	Mahmoud.Display_Elements();
 	std::cout << "\n";
 
-	std::cout << "Start Delete at the Begining function." << "\n--------------------------------------------\n";
+	std::cout << "Start Delete at the End function." << "\n--------------------------------------------\n";
 	Mahmoud.Delete_in_End();
 	Mahmoud.Display_Elements();
 	std::cout << "\n";
@@ -79,8 +79,8 @@ int main()
 	Mahmoud.Display_Elements();
 	std::cout << "\n";
 
-	std::cout << "|-> Clear the whole List\n";
+	std::cout << "Clear the whole List\n" << "\n--------------------------------------------\n";
 	Mahmoud.clear();
-	std::cout << "|-> The Whole list is cleared\n";
+	std::cout << "The Whole list is cleared\n";
 
 }
