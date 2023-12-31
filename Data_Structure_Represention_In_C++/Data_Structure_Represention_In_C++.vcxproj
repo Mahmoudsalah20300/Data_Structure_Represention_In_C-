@@ -128,9 +128,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Double_Linked_List_Testing.cpp" />
     <ClCompile Include="Linked_List_testing.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Double_Linked_List.h" />
+    <ClInclude Include="Double_Linked_List_testing.h" />
     <ClInclude Include="Linked_List.h" />
     <ClInclude Include="Linked_List_testing.h" />
   </ItemGroup>

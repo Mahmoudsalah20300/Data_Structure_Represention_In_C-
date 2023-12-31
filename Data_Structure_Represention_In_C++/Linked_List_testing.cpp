@@ -101,7 +101,6 @@ void Singular_Linked_List_testing() {
 	(x == true) ? std::cout << "\nThe Element is Founded\n" : std::cout << "OPPS Not Founded\n";
 
 
-
 	std::cout << "\nAdd At Certain Node\n------------------------------------------\n";
 	Mahmoud.Insert_at_node(-5,3);
 	Mahmoud.Display_Elements();
@@ -110,6 +109,7 @@ void Singular_Linked_List_testing() {
 	Mahmoud.Display_Elements();
 	
 	std::cout << "\nDelete at Certain Node\n---------------------------------------\n";
-	
+	Mahmoud.Delete_at_node(1);
+	Mahmoud.Display_Elements();
 		 
 }

@@ -196,31 +196,39 @@ void Linked_List<T>::Delete_at_node(int position)
 
 
 	Node<T>* current = head;
-	Node<T>* temp    = head;
+	Node<T>* temp    = nullptr;
 
-	while (current) {
-		counter++;
-		current = current -> next;
-	}
-
-	if (counter < position)
-		return;
-
-	counter = 1;
-
-	while (counter != position - 1)
+	if(position == counter)
 	{
-		counter++;
-		current = current->next;
+		temp = head;
+		head = head->next;
 	}
+	else {
+		while (current) {
+			counter++;
+			current = current->next;
+		}
 
-	temp = current;
-	temp = current->next->next->next;
+		if (counter < position)
+			return;
 
-	current->next = current->next->next;
-	delete current;
+		counter = 1;
+		current = head;
+
+		while (counter != position - 1)
+		{
+			counter++;
+			current = current->next;
+		}
+
+
+		temp = current->next;
+		current->next = temp->next;
+	}
 	delete temp;
+
 }
+
 
 /*************************************************************************************
 	This Class is used to Search an element In the list
@@ -286,27 +294,4 @@ Linked_List<T>::~Linked_List()
 	delete head;
 }
 
-      /**************************************** Double Linked List Declaration *********************************************/
-
-template<typename T>
-class Double_Node :public Node<T>
-{
-	public:
-		Double_Node* prev;
-		Double_Node(T);
-};
-
-
-
-
-template<typename T>
-class Double_Linked_List {
-
-private:
-	Double_Node<T>* Tail;
-public:
-	Double_Linked_List();
-	~Double_Linked_List();
-};
-
-
+   
