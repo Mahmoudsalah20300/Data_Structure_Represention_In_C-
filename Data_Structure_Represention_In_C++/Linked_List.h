@@ -26,6 +26,7 @@ class Node {
 		Node(T);
 };
 
+
 /*This is the template for Linked List with the avaliable function of Linke List*/
 template<typename T>
 class Linked_List {

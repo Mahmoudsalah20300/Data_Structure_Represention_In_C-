@@ -3,7 +3,6 @@
 
 int main()
 {
-	
-	Singular_Linked_List_testing();
 
+	Singular_Linked_List_testing();
 }
