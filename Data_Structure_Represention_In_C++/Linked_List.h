@@ -30,10 +30,11 @@ class Node {
 /*This is the template for Linked List with the avaliable function of Linke List*/
 template<typename T>
 class Linked_List {
-
+	
 	private:
-		Node<T>* head;
-	public:
+	Node<T>* head;
+
+	public:		
 		Linked_List();
 		void Insert_at_begining(T);
 		void Insert_in_End(T);
@@ -42,13 +43,12 @@ class Linked_List {
 		void Delete_in_End();
 		void Delete_at_node(int);
 		bool Search_for_the_element(T);
-		void Display_Elements();
-		void clear();
+		virtual void Display_Elements();
+		virtual void clear();
 		~Linked_List();
-
 };
 
-		/****************************************   Deginetion of the Class   *******************************************/
+		/****************************************   Definition of the Class   *******************************************/
 
 /*Constructor of the Node template Class*/
 template<typename T>
