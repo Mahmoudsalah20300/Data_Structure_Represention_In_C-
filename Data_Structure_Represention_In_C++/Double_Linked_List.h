@@ -66,6 +66,7 @@ void Double_Linked_List<T>::Insert_at_begining(T value) {
 	
 }
 
+
 template<typename T>
 void Double_Linked_List<T> ::Insert_at_node(T value,T atnode)
 {
