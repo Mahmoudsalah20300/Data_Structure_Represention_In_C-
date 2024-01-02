@@ -36,8 +36,8 @@ class Linked_List {
 
 	public:		
 		Linked_List();
-		void Insert_at_begining(T);
-		void Insert_in_End(T);
+		virtual void Insert_at_begining(T);
+		virtual void Insert_in_End(T);
 		void Insert_at_node(T,T);
 		void Delete_at_begining();
 		void Delete_in_End();

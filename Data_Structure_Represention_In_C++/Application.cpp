@@ -14,5 +14,7 @@ int main()
 	Mahmoud.Insert_at_begining(-9);
 	Mahmoud.Display_Elements();
 	Mahmoud.clear();
-
+	Mahmoud.Insert_in_End(-100);
+	std::cout << "\n";
+	Mahmoud.Display_Elements();
 }

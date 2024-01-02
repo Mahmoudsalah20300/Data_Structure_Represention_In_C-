@@ -27,14 +27,16 @@ class Double_Linked_List :public Linked_List<T> {
 		~Double_Linked_List();
 
 
-		void Insert_at_begining(T);
-		void Insert_in_End(T);
+		void Insert_at_begining(T) override;
+		void Insert_in_End(T) override;
 		void Insert_at_node(T value,T atnode);
-		void Delete_at_begin();
+		void Delete_at_begining();
 		void Delete_in_End();
 		void Delete_at_node(int);
+		bool Search_for_the_element(T);
 		void Display_Elements() override;
 		void clear() override;
+
 };
 
 
@@ -66,6 +68,31 @@ void Double_Linked_List<T>::Insert_at_begining(T value) {
 
 
 template<typename T>
+void Double_Linked_List<T>::Insert_in_End(T value)
+{
+	Double_Node* New_Node = new Double_Node(value);
+	Double_Node* current = head;
+	
+	if (!head)
+	{
+		New_Node->prev = nullptr;
+		head = New_Node;
+		return;
+	}
+	
+	while (current->next)
+	{
+		current =static_cast<Double_Node*> (current->next);
+	}
+	
+	current->next = New_Node;
+	New_Node->next = nullptr;
+	New_Node->prev = current;
+}
+
+
+
+template<typename T>
 void Double_Linked_List<T>::Display_Elements(){
 
 	Double_Node* Current = head;
@@ -90,5 +117,7 @@ void Double_Linked_List<T>:: clear() {
 		Current = head;
 	}
 	delete Current;
-	std::cout << "\nDouble_Linked_List was deleted\n";
 }
+
+
+
