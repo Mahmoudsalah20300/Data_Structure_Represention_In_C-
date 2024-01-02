@@ -38,11 +38,11 @@ class Linked_List {
 		Linked_List();
 		virtual void Insert_at_begining(T);
 		virtual void Insert_in_End(T);
-		void Insert_at_node(T,T);
-		void Delete_at_begining();
-		void Delete_in_End();
+	    virtual void Insert_at_node(T,T);
+		virtual void Delete_at_begining();
+	    virtual	void Delete_in_End();
 		void Delete_at_node(int);
-		bool Search_for_the_element(T);
+		virtual bool Search_for_the_element(T);
 		virtual void Display_Elements();
 		virtual void clear();
 		~Linked_List();
