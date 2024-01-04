@@ -66,44 +66,77 @@ void Double_Linked_List<T>::Insert_at_begining(T value) {
 	
 }
 
-
 template<typename T>
 void Double_Linked_List<T> ::Insert_at_node(T value,T atnode)
 {
 	Double_Node* New_Node = new Double_Node(value);
-	
+	T number_of_nodes = 0;
 	T position = 1;
-	if (position == atnode)
-	{
-		New_Node->next = head;
-		head = New_Node;
-	}
-	else
-	{
-		Double_Node* Current = head;
-		Double_Node* Current_minus_1 = head;
-		Double_Node* Current_Plus_1 = static_cast<Double_Node*>(head->next);
-		
-		while (position != atnode - 1)
-		{
-			if (position >= 2)
-			{
-				Current_minus_1 = static_cast<Double_Node*>(Current_minus_1->next);
-			}
-			Current = static_cast<Double_Node*>(Current->next);
-			Current_Plus_1 = static_cast<Double_Node*>(Current_Plus_1->next);
-			position++;
-		}
 
-		if (Current&&Current_Plus_1&&Current_minus_1)
+	Double_Node* Current = head;
+	Double_Node* Current_minus_1 = head;
+	Double_Node* Current_Plus_1 = static_cast<Double_Node*>(head->next);
+
+	while (Current)
+	{
+		number_of_nodes++;
+		Current = static_cast<Double_Node*> (Current->next);
+	}
+	
+	if (atnode < 1 || atnode  > number_of_nodes)
+	{
+		std::cout << "Please Node MUst be a valid Number between "<<1<<" and "<<number_of_nodes;
+	}
+	else{
+		if (position == atnode)
 		{
+			New_Node->next = head;
+			head = New_Node;
+		}
+		else if (atnode == number_of_nodes)
+		{
+			Current = head;
+			while (position != atnode)
+			{
+				Current = static_cast<Double_Node*>(Current->next);
+				position++;
+
+				if (position != 2)
+				{
+					Current_minus_1 = static_cast<Double_Node*>(Current_minus_1->next);
+				}
+			}
 			New_Node->next = Current;
 			New_Node->prev = Current_minus_1;
+			Current->prev = New_Node;
 			Current_minus_1->next = New_Node;
-			Current_Plus_1->prev = New_Node;
 		}
-		else {
-			std::cout << "\nCkeck you List Nodes!" << std::endl;
+		else
+		{
+			Current = head;
+
+			while (position != atnode)
+			{
+				Current = static_cast<Double_Node*>(Current->next);
+				Current_Plus_1 = static_cast<Double_Node*>(Current_Plus_1->next);
+				position++;
+
+				if (position != 2)
+				{
+					Current_minus_1 = static_cast<Double_Node*>(Current_minus_1->next);
+				}
+			}
+
+			if (Current)
+			{
+				New_Node->next = Current;
+				New_Node->prev = Current_minus_1;
+				Current_minus_1->next = New_Node;
+				Current_Plus_1->prev = New_Node;
+			}
+			else {
+				std::cout << "\nCkeck you List Nodes!" << std::endl;
+			}
 		}
 	}
 }
