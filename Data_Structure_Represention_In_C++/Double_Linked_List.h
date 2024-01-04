@@ -83,7 +83,7 @@ void Double_Linked_List<T> ::Insert_at_node(T value,T atnode)
 		Current = static_cast<Double_Node*> (Current->next);
 	}
 	
-	if (atnode < 1 || atnode  > number_of_nodes)
+	if (atnode < 1 || atnode  > number_of_nodes+1)
 	{
 		std::cout << "Please Node MUst be a valid Number between "<<1<<" and "<<number_of_nodes;
 	}
@@ -92,6 +92,22 @@ void Double_Linked_List<T> ::Insert_at_node(T value,T atnode)
 		{
 			New_Node->next = head;
 			head = New_Node;
+		}
+		else if(atnode == number_of_nodes + 1){
+			Current = head;
+			while (position != atnode-1)
+			{
+				Current = static_cast<Double_Node*>(Current->next);
+				position++;
+
+				if (position != 2)
+				{
+					Current_minus_1 = static_cast<Double_Node*>(Current_minus_1->next);
+				}
+			}
+			Current->next = New_Node;
+			New_Node->next = nullptr;
+			New_Node->prev = Current;
 		}
 		else if (atnode == number_of_nodes)
 		{
@@ -139,6 +155,12 @@ void Double_Linked_List<T> ::Insert_at_node(T value,T atnode)
 			}
 		}
 	}
+	Current = nullptr;
+	Current_minus_1 = nullptr;
+	Current_Plus_1 = nullptr;
+	delete Current;
+	delete Current_minus_1;
+	delete Current_Plus_1;
 }
 
 template<typename T>

@@ -24,9 +24,9 @@ int main()
 	//Mahmoud.Delete_at_begining();
 	std::cout << "\n";
 	//Mahmoud.Display_Elements();
-	Mahmoud.Insert_at_node(-13, 4);
+	Mahmoud.Insert_at_node(-13, 5);
 	Mahmoud.Display_Elements();
-	Mahmoud.Insert_in_End(-100);
-	std::cout << "\n";
-	Mahmoud.Display_Elements();
+	//Mahmoud.Insert_in_End(-100);
+	//std::cout << "\n";
+	//Mahmoud.Display_Elements();
 }
