@@ -220,6 +220,62 @@ void Double_Linked_List<T>::Delete_in_End() {
 	}
 }
 
+/*This Code need to be modified again to be Debuged*/
+template<typename T>
+void Double_Linked_List<T>::Delete_at_node(int node_number)
+{
+	Double_Node* Current = head;
+	int local_node_num = 0;
+	if (head)
+	{
+		while (Current->next)
+		{
+			local_node_num++;
+			Current = static_cast<Double_Node*> (Current->next);
+			std::cout <<"\n" << local_node_num << "\t";
+			std::cout << Current->data;
+		}
+		
+		if (node_number == 1)
+		{
+			Current = head;
+			head = static_cast<Double_Node*>(head->next);
+			delete Current;
+		}
+		else if(node_number == local_node_num )
+		{
+			Current = head;
+			while (Current->next)
+			{
+				Current = static_cast<Double_Node*>(Current->next);
+			}
+			delete Current->next;
+			Current->next = nullptr;
+		}
+		else{
+			local_node_num = 1;
+			Current = head;
+			while (local_node_num != node_number)
+			{
+				Current = static_cast<Double_Node*>(Current->next);
+				local_node_num++;
+			}
+			/*There is still code here to be Completed*/
+		}
+	}
+	else
+	{
+		std::cout << "\nThe Current List is Empty.";
+	}
+
+	Current = nullptr;
+	delete Current;
+}
+
+
+
+
+
 template<typename T>
 bool Double_Linked_List<T>::Search_for_the_element(T value)
 {
