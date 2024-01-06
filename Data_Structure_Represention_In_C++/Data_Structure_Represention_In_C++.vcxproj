@@ -136,6 +136,7 @@
     <ClInclude Include="Double_Linked_List_testing.h" />
     <ClInclude Include="Linked_List.h" />
     <ClInclude Include="Linked_List_testing.h" />
+    <ClInclude Include="Queue.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="Stack_Testing.h" />
   </ItemGroup>

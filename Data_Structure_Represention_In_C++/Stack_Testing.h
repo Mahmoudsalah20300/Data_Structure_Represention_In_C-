@@ -7,6 +7,7 @@ void Stack_testing()
 {
 	std::cout << "\n===================== Creating Stack ===================== \n";
 	Stack<int> Mahmoud;
+	Mahmoud.Set_Stack_Size(15);
 	std::cout << "\n===================== Tesing Push() ===================== \n";
 	Mahmoud.Push(15);
 	Mahmoud.Push(16);
