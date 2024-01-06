@@ -8,10 +8,10 @@ template<typename T>
 class Queue {
 	private:
 	
+
+	public:
 	
 	
-
-
-
-
+	
+	
 };
