@@ -38,5 +38,8 @@
     <ClInclude Include="Linked_List_testing.h">
       <Filter>Testing</Filter>
     </ClInclude>
+    <ClInclude Include="Stack_Testing.h">
+      <Filter>Testing</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

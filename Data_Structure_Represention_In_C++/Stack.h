@@ -18,7 +18,6 @@ class Stack{
 		void Push(T value);
 		void Pop();
 		bool IsEmpty();
-		bool IsFull();
 		void ClearStack();
 		void Display_Contents();
 };
@@ -35,7 +34,7 @@ Stack<T>::Stack(): Base(nullptr)
 template<typename T>
 Stack<T>::~Stack()
 {
-
+	delete Base;
 }
 
 
@@ -73,6 +72,7 @@ void Stack<T>::Display_Contents()
 template<typename T>
 void Stack<T>::Pop()
 {
+	
 	New_Node* Current = Base;
 	if (Base)
 	{
@@ -92,10 +92,26 @@ template<typename T>
 void Stack<T>::ClearStack()
 {
 	New_Node* Current = Base;
-	while (Current->next)
+	while (Current)
 	{
 		Base = Base->next;
 		delete Current;
 		Current = Base;
 	}
+}
+
+
+template<typename T>
+bool Stack<T>::IsEmpty()
+{
+	std::cout << "\nEmpty = 1, Not Empty = 0 \n";
+	if (!Base)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+
 }
