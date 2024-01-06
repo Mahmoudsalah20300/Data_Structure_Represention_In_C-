@@ -9,6 +9,9 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="Testing">
+      <UniqueIdentifier>{2aae25c1-229d-4e3b-89e0-e8e684151bc1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
@@ -23,14 +26,17 @@
     <ClInclude Include="Linked_List.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Linked_List_testing.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Double_Linked_List.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Double_Linked_List_testing.h">
+    <ClInclude Include="Stack.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Double_Linked_List_testing.h">
+      <Filter>Testing</Filter>
+    </ClInclude>
+    <ClInclude Include="Linked_List_testing.h">
+      <Filter>Testing</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

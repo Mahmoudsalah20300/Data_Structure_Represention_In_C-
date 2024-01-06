@@ -136,6 +136,7 @@
     <ClInclude Include="Double_Linked_List_testing.h" />
     <ClInclude Include="Linked_List.h" />
     <ClInclude Include="Linked_List_testing.h" />
+    <ClInclude Include="Stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
