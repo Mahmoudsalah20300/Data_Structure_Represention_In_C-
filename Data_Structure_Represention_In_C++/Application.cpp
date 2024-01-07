@@ -22,11 +22,25 @@ int main()
 	//Mahmoud.Display_Elements();
 	Mahmoud.EnQueue(-19);
 	Mahmoud.Display_Elements();
-	//std::cout << Place_Taken << "\t";
-	std::cout << "\n";
-	std::cout << Mahmoud.IsEmpty();
-	std::cout << "\n";
-	std::cout << Mahmoud.IsFull();
-
-
+	//std::cout << Mahmoud.IsEmpty();
+	//std::cout << "\n";
+	//std::cout << Mahmoud.IsFull();
+	Mahmoud.DeQueue();
+	Mahmoud.Display_Elements();
+	printf("\n");
+	Mahmoud.How_Many_Empty_Places();
+	Mahmoud.DeQueue();
+	Mahmoud.Display_Elements();
+	printf("\n");
+	Mahmoud.How_Many_Empty_Places();
+	Mahmoud.DeQueue();
+	Mahmoud.Display_Elements();
+	printf("\n");
+	Mahmoud.How_Many_Empty_Places();
+	Mahmoud.DeQueue();
+	Mahmoud.Display_Elements();
+	printf("\n");
+	Mahmoud.How_Many_Empty_Places();
+	Mahmoud.DeQueue();
+	
 }

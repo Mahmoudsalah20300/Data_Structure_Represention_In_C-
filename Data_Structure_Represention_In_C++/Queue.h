@@ -3,7 +3,7 @@
 
 #include"Linked_List.h"
 
-int Place_Taken = 1;
+
 
 template<typename T>
 class Queue {
@@ -12,6 +12,7 @@ class Queue {
 		New_Node* head;
 		New_Node* tail;
 		int SIZE = 0;
+		int Place_Taken = 1;
 	public:
 		Queue();
 		~Queue();
@@ -22,6 +23,7 @@ class Queue {
 		bool IsEmpty();
 		bool IsFull();
 		void Display_Elements();
+		void How_Many_Empty_Places();
 		T Peek();
 };
 
@@ -93,13 +95,28 @@ void Queue<T>::EnQueue(T value)
 
 
 template<typename T>
+void Queue<T>::How_Many_Empty_Places()
+{
+	std::cout<<SIZE - Place_Taken+1;
+}
+
+template<typename T>
 void Queue<T>::DeQueue()
 {
 	if (head)
-	{
+	{	
+		New_Node* Current = head;
+		--Place_Taken;
+		while (Current->next->next)
+		{		
+			Current = Current->next;
+		}
 			
-
-
+		tail = Current;
+		Current = Current->next;
+		delete Current;
+		tail->next = nullptr;
+		
 	}
 	else {
 		std::cout << "Nothing to remove, the Queue is already Empty";
@@ -120,7 +137,7 @@ bool Queue<T>::IsEmpty()
 template<typename T>
 bool Queue<T>::IsFull()
 {
-	if (Place_Taken == 6)
+	if (Place_Taken-1 == SIZE)
 		return true;
 	else
 		return false;
