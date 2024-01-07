@@ -19,9 +19,14 @@ int main()
 	Mahmoud.EnQueue(18);
 	//Mahmoud.Display_Elements();
 	Mahmoud.EnQueue(19);
-	Mahmoud.Display_Elements();
+	//Mahmoud.Display_Elements();
 	Mahmoud.EnQueue(-19);
 	Mahmoud.Display_Elements();
 	//std::cout << Place_Taken << "\t";
+	std::cout << "\n";
+	std::cout << Mahmoud.IsEmpty();
+	std::cout << "\n";
+	std::cout << Mahmoud.IsFull();
+
 
 }

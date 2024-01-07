@@ -18,7 +18,7 @@ class Queue {
 		
 		void EnQueue(T);
 		void Get_Queue_Size(int);
-		void DeQueue(T);
+		void DeQueue();
 		bool IsEmpty();
 		bool IsFull();
 		void Display_Elements();
@@ -62,9 +62,7 @@ void Queue<T>::EnQueue(T value)
 			{
 				head = turn;
 			}
-			
-			std::cout << "\nI am in 65 and Places is " << Place_Taken;
-		}
+ 		}
 		else
 		{
 			
@@ -92,6 +90,43 @@ void Queue<T>::EnQueue(T value)
 		std::cout << "\nError: The Size of the Queue Must be bigger than 0\n";
 	}
 }
+
+
+template<typename T>
+void Queue<T>::DeQueue()
+{
+	if (head)
+	{
+			
+
+
+	}
+	else {
+		std::cout << "Nothing to remove, the Queue is already Empty";
+	}
+}
+
+
+template<typename T>
+bool Queue<T>::IsEmpty()
+{
+	if (Place_Taken > 1)
+		return false;
+	else
+		return true;
+}
+
+
+template<typename T>
+bool Queue<T>::IsFull()
+{
+	if (Place_Taken == 6)
+		return true;
+	else
+		return false;
+}
+
+
 
 template<typename T>
 void Queue<T>::Display_Elements() {
